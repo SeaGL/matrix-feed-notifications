@@ -1,0 +1,13 @@
+database: sqlite:////data/state.db
+
+user:
+  displayname: Notifications
+  avatar_url: mxc://kvalhe.im/egBEmroaceizaxMRFOxoglPQ
+
+plugin_config:
+  update_interval: 121 # 2h + 1m
+  max_backoff: 10080 # 7d
+  spam_sleep: 2 # 2s
+  command_prefix: feeds
+  notification_template: "[$title]($link) in *$feed_title*"
+  admins: []

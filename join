@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+from argparse import ArgumentParser
+import asyncio
+from mautrix.client import ClientAPI
+import os
+
+homeserver = os.environ["MAUBOT_USER_CREDENTIALS_HOMESERVER"]
+user_id = os.environ["MAUBOT_USER_CREDENTIALS_ID"]
+access_token = os.environ["MAUBOT_USER_CREDENTIALS_ACCESS_TOKEN"]
+
+cli = ArgumentParser()
+cli.add_argument("room_id", type=str)
+
+
+async def main():
+    args = cli.parse_args()
+    client = ClientAPI(user_id, base_url=homeserver, token=access_token)
+
+    print(f"Joining {args.room_id}")
+    await client.join_room(args.room_id)
+    print("\n".join(["Rooms:", *[f"  - {id}" for id in await client.get_joined_rooms()]]))
+
+    await client.api.session.close()
+
+
+asyncio.run(main())
