@@ -2,7 +2,7 @@ database: sqlite:////data/state.db
 
 user:
   displayname: Notifications
-  avatar_url: mxc://kvalhe.im/egBEmroaceizaxMRFOxoglPQ
+  avatar_url: mxc://seattlematrix.org/jVPbiOAudWeUYrTaIfAQhLmo
 
 plugin_config:
   update_interval: 121 # 2h + 1m
