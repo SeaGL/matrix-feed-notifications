@@ -1,6 +1,6 @@
-FROM dock.mau.dev/maubot/maubot:v0.4.2-standalone
+FROM dock.mau.dev/maubot/maubot:v0.5.1-standalone
 
-ENV VERSION=0.3.2
+ENV VERSION=0.4.1
 
 # Plugin dependencies (as in maubot.yaml)
 RUN apk add --no-cache \
