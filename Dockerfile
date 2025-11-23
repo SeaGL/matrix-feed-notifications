@@ -1,4 +1,4 @@
-FROM dock.mau.dev/maubot/maubot:v0.5.2-standalone
+FROM dock.mau.dev/maubot/maubot:v0.6.0-standalone
 
 ENV VERSION=0.4.1
 
